@@ -1,6 +1,6 @@
 'use strict';
 
-let WelcomePage = require('./Pages/newUserWelcomePage-objects');
+let WelcomePage = require('./pages/newUserWelcomePage-objects');
 
 describe('Registration on site through Email: ', function () {
     let welcomePage = new WelcomePage();

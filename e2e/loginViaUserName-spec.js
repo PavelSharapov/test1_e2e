@@ -1,7 +1,7 @@
 'use strict';
 
-let WelcomePage = require('./Pages/newUserWelcomePage-objects.js');
-let LoginedUserMainPage = require('./Pages/loginedUserGamesPage-objects.js');
+let WelcomePage = require('./pages/newUserWelcomePage-objects.js');
+let LoginedUserMainPage = require('./pages/loginedUserGamesPage-objects.js');
 
 describe('Login to the site', function () {
     let welcomePage = new WelcomePage();

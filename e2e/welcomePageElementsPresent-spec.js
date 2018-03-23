@@ -1,7 +1,7 @@
 'use strict';
 
 
-let WelcomePage = require('./Pages/newUserWelcomePage-objects');
+let WelcomePage = require('./pages/newUserWelcomePage-objects');
 
 
 describe('Welcome page sections:', function () {
