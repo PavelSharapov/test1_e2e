@@ -61,7 +61,7 @@ let LoginedUserMainPage = function () {
      *  Games block
      */
 
-delete
+
 
 
 
