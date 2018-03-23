@@ -1,5 +1,4 @@
-// All_elements_is_present on pageeeeee
-
+// All_elements_is_present on page
 exports.config = {
 
     framework: 'jasmine2',
