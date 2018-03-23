@@ -1,15 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="2156375c-f6de-433c-9c3e-e6e145c6f157" name="Default" comment="test git again">
-      <change beforePath="" afterPath="$PROJECT_DIR$/.gitignore" />
-      <change beforePath="$PROJECT_DIR$/.idea/Pravda-test.iml" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/.idea/jsLibraryMappings.xml" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/.idea/watcherTasks.xml" afterPath="" />
+    <list default="true" id="2156375c-f6de-433c-9c3e-e6e145c6f157" name="Default" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
@@ -280,7 +272,7 @@
       <workItem from="1521795389966" duration="7666000" />
       <workItem from="1521809933055" duration="1104000" />
       <workItem from="1521812014141" duration="115000" />
-      <workItem from="1521812146644" duration="174000" />
+      <workItem from="1521812146644" duration="189000" />
     </task>
     <task id="LOCAL-00001" summary="test git">
       <created>1521811199088</created>
@@ -303,7 +295,14 @@
       <option name="project" value="LOCAL" />
       <updated>1521811506760</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="test git again">
+      <created>1521812326224</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1521812326225</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TestHistory">
@@ -339,7 +338,7 @@
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="104572000" />
+    <option name="totallyTimeSpent" value="104587000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="1917" y="7" width="1922" height="1031" extended-state="6" />
@@ -392,7 +391,8 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="test git" />
-    <option name="LAST_COMMIT_MESSAGE" value="test git" />
+    <MESSAGE value="test git again" />
+    <option name="LAST_COMMIT_MESSAGE" value="test git again" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
