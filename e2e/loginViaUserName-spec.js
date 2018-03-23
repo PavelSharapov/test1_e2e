@@ -1,7 +1,7 @@
 'use strict';
 
-let WelcomePage = require('/home/pavel/Usefull tolls/Protractor tests/Pravda-e2e-test/e2e/Pages/newUserWelcomePage-objects');
-let LoginedUserMainPage = require('/home/pavel/Usefull tolls/Protractor tests/Pravda-e2e-test/e2e/Pages/loginedUserGamesPage-objects');
+let WelcomePage = require('./Pages/newUserWelcomePage-objects.js');
+let LoginedUserMainPage = require('./Pages/loginedUserGamesPage-objects.js');
 
 describe('Login to the site', function () {
     let welcomePage = new WelcomePage();

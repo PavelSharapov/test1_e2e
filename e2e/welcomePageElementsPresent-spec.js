@@ -1,7 +1,7 @@
 'use strict';
 
 
-let WelcomePage = require('/home/pavel/Usefull tolls/Protractor tests/Pravda-e2e-test/e2e/Pages/newUserWelcomePage-objects');
+let WelcomePage = require('./Pages/newUserWelcomePage-objects');
 
 
 describe('Welcome page sections:', function () {

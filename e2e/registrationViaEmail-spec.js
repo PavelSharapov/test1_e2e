@@ -1,6 +1,6 @@
 'use strict';
 
-let WelcomePage = require('/home/pavel/Usefull tolls/Protractor tests/Pravda-e2e-test/e2e/Pages/newUserWelcomePage-objects');
+let WelcomePage = require('./Pages/newUserWelcomePage-objects');
 
 describe('Registration on site through Email: ', function () {
     let welcomePage = new WelcomePage();
