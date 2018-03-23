@@ -2,7 +2,21 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="2156375c-f6de-433c-9c3e-e6e145c6f157" name="Default" comment="">
+      <change beforePath="$PROJECT_DIR$/.gitignore" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/.idea/Pravda-test.iml" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/.idea/jsLibraryMappings.xml" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/.idea/watcherTasks.xml" afterPath="" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/e2e/Pages/loginedUserGamesPage-objects.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/e2e/Pages/newUserWelcomePage-objects.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/e2e/loginViaUserName-spec.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/e2e/registrationViaEmail-spec.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/e2e/welcomePageElementsPresent-spec.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/protractor.conf.js" afterPath="" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -29,8 +43,8 @@
       <file leaf-file-name=".gitignore" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/.gitignore">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="18">
-              <caret line="1" column="5" lean-forward="true" selection-start-line="1" selection-start-column="5" selection-end-line="1" selection-end-column="5" />
+            <state relative-caret-position="54">
+              <caret line="3" column="0" lean-forward="true" selection-start-line="3" selection-start-column="0" selection-end-line="3" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -272,7 +286,7 @@
       <workItem from="1521795389966" duration="7666000" />
       <workItem from="1521809933055" duration="1104000" />
       <workItem from="1521812014141" duration="115000" />
-      <workItem from="1521812146644" duration="189000" />
+      <workItem from="1521812146644" duration="743000" />
     </task>
     <task id="LOCAL-00001" summary="test git">
       <created>1521811199088</created>
@@ -302,7 +316,14 @@
       <option name="project" value="LOCAL" />
       <updated>1521812326225</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="test git again">
+      <created>1521812339248</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1521812339248</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="TestHistory">
@@ -338,7 +359,7 @@
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="104587000" />
+    <option name="totallyTimeSpent" value="105141000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="1917" y="7" width="1922" height="1031" extended-state="6" />
@@ -618,8 +639,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/.gitignore">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="18">
-          <caret line="1" column="5" lean-forward="true" selection-start-line="1" selection-start-column="5" selection-end-line="1" selection-end-column="5" />
+        <state relative-caret-position="54">
+          <caret line="3" column="0" lean-forward="true" selection-start-line="3" selection-start-column="0" selection-end-line="3" selection-end-column="0" />
           <folding />
         </state>
       </provider>
