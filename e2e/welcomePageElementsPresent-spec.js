@@ -4,7 +4,7 @@
 let WelcomePage = require('./pages/newUserWelcomePage-objects.js');
 
 
-describe('Welcome page sections:', function () {
+describe('Welcome page sections.', function () {
     let welcomePage = new WelcomePage();
 
     it('should open Welcome page', function () {
@@ -12,7 +12,7 @@ describe('Welcome page sections:', function () {
         welcomePage.waitForWelcomePageDownload();
         expect(browser.getCurrentUrl()).toEqual(browser.baseUrl);
     });
-    describe('Header section ', function () {
+    describe('Header section: ', function () {
         it('should present Pravda logo in header', function () {
             expect(welcomePage.headerLogoPravda.isDisplayed()).toBe(true);
             // browser.sleep(2000);
@@ -55,7 +55,7 @@ describe('Welcome page sections:', function () {
             // browser.sleep(2000);
         });
     });
-    describe('Welcome section :', function () {
+    describe('Welcome section:', function () {
         it('should present Welcome block', function () {
             expect(welcomePage.welcomeBlock.isDisplayed()).toBe(true);
             // browser.sleep(2000);
@@ -76,7 +76,7 @@ describe('Welcome page sections:', function () {
             // browser.sleep(2000);
         });
     });
-    describe('Register section :', function () {
+    describe('Register section:', function () {
         it('register block is displayed',function () {
             expect(welcomePage.welcomeRegisterBlock.isDisplayed()).toBe(true);
         });
@@ -119,7 +119,7 @@ describe('Welcome page sections:', function () {
             expect(welcomePage.welcomeRegisterBlockRegistrationButton.isDisplayed()).toBe(true);
         });
     });
-    describe('Our bonuses section :',function () {
+    describe('Our bonuses section:',function () {
         it('Our bonuses block should displayed',function () {
            expect(welcomePage.ourBonusesBlock.isDisplayed()).toBe(true);
         });
@@ -229,7 +229,7 @@ describe('Welcome page sections:', function () {
             expect(welcomePage.wantPlayCoin_6.isDisplayed()).toBe(true);
         });
     });
-    describe('Footer section :', function () {
+    describe('Footer section:', function () {
         it('should displayed Footer-top block',function () {
             expect(welcomePage.footerTopBlock.isDisplayed()).toBe(true);
         });

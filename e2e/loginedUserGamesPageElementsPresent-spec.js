@@ -1,11 +1,13 @@
 'use strict';
 
 
-let LoginedUserGamesPage = require('./pages/newUserWelcomePage-objects.js');
+let LoginedUserGamesPage = require('./pages/loginedUserGamesPage-objects.js');
+let WelcomePage = require('./pages/newUserWelcomePage-objects.js');
 
 
-describe('Welcome page sections.', function () {
+describe('Logined user Games page sections.', function () {
     let loginedUserGamesPage = new LoginedUserGamesPage();
+    let welcomePage = new WelcomePage();
     // browser.sleep(3000);
 
 
@@ -15,11 +17,6 @@ describe('Welcome page sections.', function () {
             self.isLogged = isLogged;
         });*/
 
-    it('should open Welcome page', function () {
-        welcomePage.get();
-        welcomePage.waitForWelcomePageDownload();
-        expect(browser.getCurrentUrl()).toEqual(browser.baseUrl);
-    });
     describe('Header section:', function () {
         it('should present "Games" button in header', function () {
             expect(loginedUserGamesPage.headerAllGamesItem.isDisplayed()).toBe(true);

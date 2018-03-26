@@ -13,10 +13,10 @@ let LoginedUserGamesPage = function () {
      */
     this.headerLogoPravda = $('.main-logo');
     this.headerAllGamesItem = $('#link_casino_games_all');
-    this.headerJackpotItem = $('#welcome-lan > header > div > div > div.main-nav > ul > li:nth-child(2) > a');
-    this.headerCashboxItem = $('#welcome-lan > header > div > div > div.main-nav > ul > li:nth-child(3) > a');
-    this.headerBonusesInfoItem = $('#welcome-lan > header > div > div > div.main-nav > ul > li:nth-child(4) > a');
-    this.headerTournamentsItem = $('#welcome-lan > header > div > div > div.main-nav > ul > li:nth-child(5) > a');
+    this.headerJackpotItem = $('body > header > div > div > div.main-nav > ul > li:nth-child(2) > a');
+    this.headerCashboxItem = $('body > header > div > div > div.main-nav > ul > li:nth-child(3) > a');
+    this.headerBonusesInfoItem = $('body > header > div > div > div.main-nav > ul > li:nth-child(4) > a');
+    this.headerTournamentsItem = $('body > header > div > div > div.main-nav > ul > li:nth-child(5) > a');
     this.headerUserNickName = $('.u_log_tittle.user_nikname');
     this.headerLoginedUserItem = $('#user_cvg');
     this.headerUserWalletItem = $('.main-wallet');
@@ -130,6 +130,19 @@ let LoginedUserGamesPage = function () {
     this.waitForMainPageDownloadAfterUserLogIn = function () {
         browser.wait(EC.visibilityOf(this.headerLogoPravda),4000);
         browser.wait(EC.visibilityOf(this.headerLoginedUserItem),4000);
+    };
+    /**
+     * Jump to the footer
+     */
+    this.jumpToFooter = function () {
+
+        browser.actions().click(this.footerVisaImage).perform();
+    };
+    /**
+     * Jump to the header
+     */
+    this.jumpToHeader = function () {
+        browser.actions().click(this.footerScrollTopButton).perform();
     };
 
 };
