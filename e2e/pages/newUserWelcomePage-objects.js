@@ -1,7 +1,7 @@
 'use strict';
 
 /**
- * Page objects for the Main page.
+ * Objects of Welcome page (new user).
  * @constructor
  */
 
@@ -9,7 +9,7 @@ const EC = protractor.ExpectedConditions;
 let WelcomePage = function () {
 
     /**
-     *  Header section elements
+     *  Header section
      */
     this.headerLogoPravda = $('.main-logo');
     this.headerAllGamesItem = $('#link_casino_games_all');
@@ -21,7 +21,7 @@ let WelcomePage = function () {
     this.headerRegisterButton = $('#btn-register');
     this.headerWelcomeBonusButton = $('#btn-bonuses');
     /**
-     *  Welcome section elements
+     *  Welcome section
      */
     this.welcomeBlock = $('.welcome-block');
     this.welcomeText = $('.sp-welcom');
@@ -29,7 +29,7 @@ let WelcomePage = function () {
     this.welcomeFirstDepositImage = $('.welcome-block img');
     this.welcomeWantPlayButton = $('.welcome-play');
     /**
-     *  Welcome-register section elements
+     *  Welcome-register section
      */
     this.welcomeRegisterBlock = $('#welcome-register');
     this.welcomeRegisterBlockCube_1 = $('.cube-1');
@@ -45,7 +45,7 @@ let WelcomePage = function () {
     this.welcomeTermsLink = $ ('.my-check.agree-term span a');
     this.welcomeRegisterBlockRegistrationButton = $ ('.reg-btn');
     /**
-     * Our bonuses section elements
+     * Our bonuses section
      */
     this.ourBonusesBlock = $('.w-user-bonus');
     this.ourBonusesBlockTitle = $('#welcome-lan > section.w-user-bonus > div > h2');
@@ -55,7 +55,7 @@ let WelcomePage = function () {
     // this.ourBonusesBlockBonusItem_4 = $('#welcome-lan > section.w-user-bonus > div > div > a:nth-child(4)');
     this.ourBonusesBlockSlotImage = $('.slot');
     /**
-     * Best providers section elements
+     * Best providers section
      */
     this.bestProvidesBlock = $('.best');
     this.bestProvidesBlockTitle = $('#welcome-lan > section.best > div > h2');
@@ -68,7 +68,7 @@ let WelcomePage = function () {
     this.bestProvidesBlockItem_7 = $$('.provider-item').get(6);
     this.bestProvidesBlockItem_8 = $$('.provider-item').get(7);
     /**
-     * Want play section elements
+     * Want play section
      */
     this.wantPlayBlock = $('.w-whant');
     this.wantPlayArrow = $('.block-whant img');
@@ -84,7 +84,7 @@ let WelcomePage = function () {
      */
     this.footerTopBlock = $('.footer-top');
     this.footerBottomBlock = $('.footer-bot');
-    this.footerLogo = $('.footer-logo');
+    this.footerLogo = $('.footer-logo #Layer_1_1');
     this.footerContactsLink = $$('footer .foter-link').get(0);
     this.footerMethodsLink = $$('footer .foter-link').get(1);
     this.footerTermsLink = $$('footer .foter-link').get(2);
@@ -105,7 +105,7 @@ let WelcomePage = function () {
     this.footerWirecardImage = $$ ('.footer-bot .block-bot img').get(6);
     this.footerScrollTopButton = $('#scroll-top');
     /**
-     * Registration popup elements
+     * Registration popup
      */
     this.regForm = $('.block-reg');
     this.regFormEmailTab =  $('.tab.lef');
@@ -121,7 +121,7 @@ let WelcomePage = function () {
     this.regFormSuccessUserEmailText = $('.block-success .user-email');
     this.regFormSuccessCLoseButton = $('.block-success .close-modal')
     /**
-     * Login popup elements
+     * Login popup
      */
     this.loginForm = $('.block-login');
     this.loginFormEmailTab = $ ('.block-login .tab.lef');

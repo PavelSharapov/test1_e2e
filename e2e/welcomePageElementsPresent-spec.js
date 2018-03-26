@@ -6,21 +6,17 @@ let WelcomePage = require('./pages/newUserWelcomePage-objects.js');
 
 describe('Welcome page sections:', function () {
     let welcomePage = new WelcomePage();
-    // browser.sleep(3000);
-
-
- /*   beforeAll(function () {
-        let self = this;
-        browser.executeScript("return window.localStorage.getItem('ngStorage-logged');").then(function (isLogged) {
-            self.isLogged = isLogged;
-        });*/
 
     it('should open Welcome page', function () {
         welcomePage.get();
         welcomePage.waitForWelcomePageDownload();
         expect(browser.getCurrentUrl()).toEqual(browser.baseUrl);
     });
-    describe('Header section elements', function () {
+    describe('Header section ', function () {
+        it('should present Pravda logo in header', function () {
+            expect(welcomePage.headerLogoPravda.isDisplayed()).toBe(true);
+            // browser.sleep(2000);
+        });
         it('should present "Games" button in header', function () {
             expect(welcomePage.headerAllGamesItem.isDisplayed()).toBe(true);
             // browser.sleep(2000);
@@ -41,10 +37,7 @@ describe('Welcome page sections:', function () {
             expect(welcomePage.headerTournamentsItem.isDisplayed()).toBe(true);
             // browser.sleep(2000);
         });
-        it('should present Pravda logo in header', function () {
-            expect(welcomePage.headerLogoPravda.isDisplayed()).toBe(true);
-            // browser.sleep(2000);
-        });
+
         it('should present "Login" button in header', function () {
             expect(welcomePage.headerLoginButton.isDisplayed()).toBe(true);
             // browser.sleep(2000);
@@ -62,7 +55,7 @@ describe('Welcome page sections:', function () {
             // browser.sleep(2000);
         });
     });
-    describe('Welcome section elements:', function () {
+    describe('Welcome section :', function () {
         it('should present Welcome block', function () {
             expect(welcomePage.welcomeBlock.isDisplayed()).toBe(true);
             // browser.sleep(2000);
@@ -83,7 +76,7 @@ describe('Welcome page sections:', function () {
             // browser.sleep(2000);
         });
     });
-    describe('Register section elements:', function () {
+    describe('Register section :', function () {
         it('register block is displayed',function () {
             expect(welcomePage.welcomeRegisterBlock.isDisplayed()).toBe(true);
         });
@@ -126,7 +119,7 @@ describe('Welcome page sections:', function () {
             expect(welcomePage.welcomeRegisterBlockRegistrationButton.isDisplayed()).toBe(true);
         });
     });
-    describe('Our bonuses section elements:',function () {
+    describe('Our bonuses section :',function () {
         it('Our bonuses block should displayed',function () {
            expect(welcomePage.ourBonusesBlock.isDisplayed()).toBe(true);
         });
@@ -153,7 +146,7 @@ describe('Welcome page sections:', function () {
             expect(welcomePage.ourBonusesBlockSlotImage.isDisplayed()).toBe(true);
         });
     });
-    describe('Best providers section items:',function () {
+    describe('Best providers section:',function () {
         it('Best providers block should present', function () {
             expect(welcomePage.bestProvidesBlock.isDisplayed()).toBe(true);
         });
@@ -204,7 +197,7 @@ describe('Welcome page sections:', function () {
                 .toEqual(browser.baseUrl + '/games/igrosoft');
         });
     });
-    describe('"Want to play" section items:', function () {
+    describe('"Want to play" section:', function () {
         it('should displayed w-whant block', function () {
            expect(welcomePage.wantPlayBlock.isDisplayed()).toBe(true);
         });
@@ -236,12 +229,15 @@ describe('Welcome page sections:', function () {
             expect(welcomePage.wantPlayCoin_6.isDisplayed()).toBe(true);
         });
     });
-    describe('Footer section elements:', function () {
+    describe('Footer section :', function () {
         it('should displayed Footer-top block',function () {
             expect(welcomePage.footerTopBlock.isDisplayed()).toBe(true);
         });
         it('should displayed Footer-bottom block',function () {
             expect(welcomePage.footerBottomBlock.isDisplayed()).toBe(true);
+        });
+        it('should displayed footer logo', function () {
+            expect(welcomePage.footerLogo.isDisplayed()).toBe(true);
         });
         it('should displayed "Contacts" item and contain link',function () {
             expect(welcomePage.footerContactsLink.isDisplayed()).toBe(true);
@@ -253,7 +249,7 @@ describe('Welcome page sections:', function () {
                 console.log(link);
             });*/
         });
-        it('should displayed "Method" item and contain link',function () {
+        it('should displayed "Methods" item and contain link',function () {
             expect(welcomePage.footerMethodsLink.isDisplayed()).toBe(true);
             expect(welcomePage.footerMethodsLink.getAttribute('href')).toEqual(browser.baseUrl + '/payment/methods');
 

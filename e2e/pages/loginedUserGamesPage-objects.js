@@ -1,15 +1,15 @@
 'use strict';
 
 /**
- * Page objects for the Main page.
+ * Objects of Game page for logined user.
  * @constructor
  */
 
 const EC = protractor.ExpectedConditions;
-let LoginedUserMainPage = function () {
+let LoginedUserGamesPage = function () {
 
     /**
-     *  Header section elements
+     *  Header section
      */
     this.headerLogoPravda = $('.main-logo');
     this.headerAllGamesItem = $('#link_casino_games_all');
@@ -25,7 +25,7 @@ let LoginedUserMainPage = function () {
     this.headerBonusItem = $('.bonus_svg');
     this.headerLogOutItem = $('.wr-user-log ul li:nth-child(5) a #Layer_1');
     /**
-     *  Slider block elements
+     *  Slider section
      */
     this.sliderBlock = $('#hammer-slider');
     this.sliderLeftControl = $('#prev-btn');
@@ -34,7 +34,7 @@ let LoginedUserMainPage = function () {
     this.sliderDot_2 = $('#dot-container > li:nth-child(2)');
     this.sliderDot_3 = $('#dot-container > li:nth-child(3)');
     /**
-     *  Games filter block
+     *  Games filter section
      */
     this.exchangeBlock = $('.gama-nav .exchange span');
     this.exchangeBlockValue = $('.exchange-val');
@@ -47,7 +47,7 @@ let LoginedUserMainPage = function () {
     this.gamesFilterItem_6 = $$('.game-filters .link-filter').get(5);
     this.gamesFilterItem_7 = $$('.game-filters .link-filter').get(6);
     /**
-     *  Vendors filter block
+     *  Vendors filter section
      */
     this.vendorsFilter_1 = $$('.vendors .link-filter').get(0);
     this.vendorsFilter_2 = $$('.vendors .link-filter').get(1);
@@ -57,46 +57,49 @@ let LoginedUserMainPage = function () {
     this.vendorsFilter_6 = $$('.vendors .link-filter').get(5);
     this.vendorsFilter_7 = $$('.vendors .link-filter').get(6);
     this.vendorsFilter_8 = $$('.vendors .link-filter').get(7);
+    this.vendorsFilterIcon_1 = $$('.vendors #Layer_1').get(0);
+    this.vendorsFilterIcon_2 = $$('.vendors #Layer_1').get(1);
+    this.vendorsFilterIcon_3 = $$('.vendors #Layer_1').get(2);
+    this.vendorsFilterIcon_4 = $$('.vendors #Layer_1').get(3);
+    this.vendorsFilterIcon_5 = $$('.vendors #Layer_1').get(4);
+    this.vendorsFilterIcon_6 = $$('.vendors #Layer_1').get(5);
+    this.vendorsFilterIcon_7 = $$('.vendors #Layer_1').get(6);
+    this.vendorsFilterIcon_8 = $$('.vendors #Layer_1').get(7);
     /**
-     *  Games block
+     *  Games section
      */
-
-
-
-
-
-
-
-
-
-
+    this.gamesBlock = $('.games-block');
+    this.gamePrewiewTop_1 = $$('.games-block .wr-game .game-top').get(0);
+    this.gamePrewiewTop_2 = $$('.games-block .wr-game .game-top').get(1);
+    this.gamePrewiewTop_3 = $$('.games-block .wr-game .game-top').get(2);
+    this.gamePrewiewTop_4 = $$('.games-block .wr-game .game-top').get(3);
+    this.gamePrewiewTop_5 = $$('.games-block .wr-game .game-top').get(4);
+    this.gamePrewiewTop_6 = $$('.games-block .wr-game .game-top').get(5);
+    this.gamePrewiewTop_7 = $$('.games-block .wr-game .game-top').get(6);
+    this.gamePrewiewTop_8 = $$('.games-block .wr-game .game-top').get(7);
+    this.gamePrewiewTop_9 = $$('.games-block .wr-game .game-top').get(8);
+    this.gamePrewiewTop_10 = $$('.games-block .wr-game .game-top').get(9);
+    this.gamePrewiewTop_11 = $$('.games-block .wr-game .game-top').get(10);
+    this.gamePrewiewBottom_1 = $$('.games-block .wr-game .game-bot').get(0);
+    this.gamePrewiewBottom_2 = $$('.games-block .wr-game .game-bot').get(1);
+    this.gamePrewiewBottom_3 = $$('.games-block .wr-game .game-bot').get(2);
+    this.gamePrewiewBottom_4 = $$('.games-block .wr-game .game-bot').get(3);
+    this.gamePrewiewBottom_5 = $$('.games-block .wr-game .game-bot').get(4);
+    this.gamePrewiewBottom_6 = $$('.games-block .wr-game .game-bot').get(5);
+    this.gamePrewiewBottom_7 = $$('.games-block .wr-game .game-bot').get(6);
+    this.gamePrewiewBottom_8 = $$('.games-block .wr-game .game-bot').get(7);
+    this.gamePrewiewBottom_9 = $$('.games-block .wr-game .game-bot').get(8);
+    this.gamePrewiewBottom_10 = $$('.games-block .wr-game .game-bot').get(9);
+    this.gamePrewiewBottom_11 = $$('.games-block .wr-game .game-bot').get(10);
+    this.bigGamePrewiewTop = $('.games-block .wr-game .b-top');
+    this.bigGamePrewiewMid = $('.games-block .wr-game .b-mid');
+    this.gameBigPrewiewBottom = $('.games-block .wr-game .b-bot');
     /**
-     *  Welcome section elements
-     */
-
-
-    /**
-     *  Welcome-register section elements
-     */
-
-    /**
-     * Our bonuses section elements
-     */
-
-    /**
-     * Best providers section elements
-     */
-
-    /**
-     * Want play section elements
-     */
-
-    /**
-     * Footer section
+     *  Footer section section
      */
     this.footerTopBlock = $('.footer-top');
     this.footerBottomBlock = $('.footer-bot');
-    this.footerLogo = $('.footer-logo');
+    this.footerLogo = $('.footer-logo #Layer_1_1');
     this.footerContactsLink = $$('footer .foter-link').get(0);
     this.footerMethodsLink = $$('footer .foter-link').get(1);
     this.footerTermsLink = $$('footer .foter-link').get(2);
@@ -118,8 +121,6 @@ let LoginedUserMainPage = function () {
     this.footerScrollTopButton = $('#scroll-top');
 
 
-
-
                  /*  Actions block */
 
 
@@ -133,4 +134,4 @@ let LoginedUserMainPage = function () {
 
 };
 
-module.exports = LoginedUserMainPage;
+module.exports = LoginedUserGamesPage;
