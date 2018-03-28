@@ -198,7 +198,6 @@ describe('Logined user Games page sections.', function () {
             expect(loginedUserGamesPage.gamePrewiewBottom_11).toBeDisplayed();
         });
         it('should displayed big-game block prewiev', function () {
-            loginedUserGamesPage.jumpToFooter();
             expect(loginedUserGamesPage.bigGamePrewiewTop.isDisplayed()).toBe(true);
             expect(loginedUserGamesPage.bigGamePrewiewMid.isDisplayed()).toBe(false);
             expect(loginedUserGamesPage.bigGamePrewiewBottom.isDisplayed()).toBe(true);
