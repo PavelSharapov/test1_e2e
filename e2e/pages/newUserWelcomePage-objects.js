@@ -124,8 +124,8 @@ let WelcomePage = function () {
      * Login popup
      */
     this.loginForm = $('.block-login');
-    this.loginFormEmailTab = $ ('.block-login .tab.lef');
-    this.loginFormSocialTab = $('.block-login .tab.rig');
+   /* this.loginFormEmailTab = $ ('.block-login .tab.lef');
+    this.loginFormSocialTab = $('.block-login .tab.rig');*/
     this.loginFormUserNameInput =$('#form_auth #in_user_login');
     this.loginFormPasswordInput =$('#form_auth #in_user_pass');
     this.loginFormLoginButton = $('#btn_auth');
@@ -194,7 +194,7 @@ let WelcomePage = function () {
     };
     this.regFormSuccessClose = function () {
         browser.actions().click(this.regFormSuccessCLoseButton).perform();
-    }
+    };
     /**
      * Login form actions
      */

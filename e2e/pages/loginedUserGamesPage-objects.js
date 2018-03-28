@@ -4,8 +4,8 @@
  * Objects of Game page for logined user.
  * @constructor
  */
-
 const EC = protractor.ExpectedConditions;
+
 let LoginedUserGamesPage = function () {
 
     /**
@@ -22,8 +22,18 @@ let LoginedUserGamesPage = function () {
     this.headerUserWalletItem = $('.main-wallet');
     this.headerCurrentWalueVolletItem = $('#currentWalueVolletDiv');
     this.headerDepositItem = $('#dep_cvg');
-    this.headerBonusItem = $('.bonus_svg');
+    this.headerBonusActivateItem = $('#bonus_svg');
     this.headerLogOutItem = $('.wr-user-log ul li:nth-child(5) a #Layer_1');
+    this.headerLoginButton = $('#btn-login');
+    /**
+     * Login popup
+     */
+    this.loginForm = $('.block-login');
+   /* this.loginFormEmailTab = $ ('.block-login .tab.lef');
+    this.loginFormSocialTab = $('.block-login .tab.rig');*/
+    this.loginFormUserNameInput =$('#form_auth #in_user_login');
+    this.loginFormPasswordInput =$('#form_auth #in_user_pass');
+    this.loginFormLoginButton = $('#btn_auth');
     /**
      *  Slider section
      */
@@ -123,9 +133,37 @@ let LoginedUserGamesPage = function () {
 
                  /*  Actions block */
 
+    /**
+     * Login to site via Username
+     */
+
+    this.login = function (userName, userPassword) {
+        browser.driver.manage().window().maximize();
+        browser.driver.get(browser.baseUrl);
+        browser.ignoreSynchronization = true;
+        this.waitForWelcomePageDownload();
+        this.loginFormOpen();
+        this.waitForLoginFormOpen();
+        this.loginFormUserNameInput.sendKeys(userName);
+        this.loginFormPasswordInput.sendKeys(userPassword);
+        this.loginFormloginButtonPress();
+        this.waitForMainPageDownloadAfterUserLogIn();
+    };
+    this.loginFormOpen = function () {
+        browser.actions().click(this.headerLoginButton).perform();
+    };
+    this.loginFormloginButtonPress = function () {
+        browser.actions().click(this.loginFormLoginButton).perform();
+    };
+    this.waitForWelcomePageDownload = function () {
+        browser.wait(EC.visibilityOf(this.headerLogoPravda),3000)
+    };
+    this.waitForLoginFormOpen = function () {
+        browser.wait(EC.visibilityOf(this.loginForm), 2000)
+    };
 
     /**
-     * Waiting to Login and Main page downloading
+     * Waiting for "Games" page download
      */
     this.waitForMainPageDownloadAfterUserLogIn = function () {
         browser.wait(EC.visibilityOf(this.headerLogoPravda),4000);
