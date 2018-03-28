@@ -29,7 +29,7 @@ let LoginedUserGamesPage = function () {
      * Login popup
      */
     this.loginForm = $('.block-login');
-   /* this.loginFormEmailTab = $ ('.block-login .tab.lef');
+    /* this.loginFormEmailTab = $ ('.block-login .tab.lef');
     this.loginFormSocialTab = $('.block-login .tab.rig');*/
     this.loginFormUserNameInput =$('#form_auth #in_user_login');
     this.loginFormPasswordInput =$('#form_auth #in_user_pass');
@@ -46,7 +46,8 @@ let LoginedUserGamesPage = function () {
     /**
      *  Games filter section
      */
-    this.exchangeBlock = $('.gama-nav .exchange span');
+    this.gamesNavBlock = $('.gama-nav');
+    this.exchangeBlock = $('.gama-nav .exchange');
     this.exchangeBlockValue = $('.exchange-val');
     this.gameSearchInputBlock = $('#input_search');
     this.gamesFilterItem_1 = $$('.game-filters .link-filter').get(0);
@@ -59,6 +60,7 @@ let LoginedUserGamesPage = function () {
     /**
      *  Vendors filter section
      */
+    this.vendorsFilterBlock = $('.vendors');
     this.vendorsFilter_1 = $$('.vendors .link-filter').get(0);
     this.vendorsFilter_2 = $$('.vendors .link-filter').get(1);
     this.vendorsFilter_3 = $$('.vendors .link-filter').get(2);
@@ -101,9 +103,9 @@ let LoginedUserGamesPage = function () {
     this.gamePrewiewBottom_9 = $$('.games-block .wr-game .game-bot').get(8);
     this.gamePrewiewBottom_10 = $$('.games-block .wr-game .game-bot').get(9);
     this.gamePrewiewBottom_11 = $$('.games-block .wr-game .game-bot').get(10);
-    this.bigGamePrewiewTop = $('.games-block .wr-game .b-top');
-    this.bigGamePrewiewMid = $('.games-block .wr-game .b-mid');
-    this.gameBigPrewiewBottom = $('.games-block .wr-game .b-bot');
+    this.bigGamePrewiewTop = $('.games-block .big-game .b-top');
+    this.bigGamePrewiewMid = $('.games-block .big-game .b-mid');
+    this.bigGamePrewiewBottom = $('.games-block .big-game .b-bot');
     /**
      *  Footer section section
      */

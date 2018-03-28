@@ -10,22 +10,21 @@ exports.config = {
     // specs: ['./e2e/loginViaUserName-spec.js','./e2e/loginedUserGamesPageElementsPresent-spec.js'],
     specs: ['./e2e/loginedUserGamesPageElementsPresent-spec.js'],
     capabilities: {
-        browserName: 'chrome'
-        /* chromeOptions: {
-
-            /!**
-             * Set browser language (menus & so on)
-             *!/
-
-            args: ['lang=en-EN'],
-            prefs: {
-                intl: {
-                    accept_languages: "en-EN"
-                }
+        browserName: 'chrome',
+        chromeOptions: {
+            // disable "chrome is being controlled by automated software"
+            'args': ['disable-infobars=true'],
+        },
+     /*
+         * Set browser language (menus & so on)
+         *!/
+        args: ['lang=en-EN'],
+        prefs: {
+            intl: {
+                accept_languages: "en-EN"
             }
-
-        }*/
-
+        }
+    }*/
     },
     baseUrl: 'https://pravda.casino/ru',
     allScriptsTimeout: 8000,

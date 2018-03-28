@@ -108,15 +108,15 @@ let WelcomePage = function () {
      * Registration popup
      */
     this.regForm = $('.block-reg');
-    this.regFormEmailTab =  $('.tab.lef');
-    this.regFormSocialTab = $('.tab.rig');
+   /* this.regFormEmailTab =  $('.tab.lef');
+    this.regFormSocialTab = $('.tab.rig');*/
     this.regFormEmailInput = $('.block-reg #fos_user_registration_form_email');
     this.regFormUserNameInput = $('.block-reg #fos_user_registration_form_username');
     this.regFormPasswordInput = $('.block-reg #fos_user_registration_form_plainPassword_first');
     this.regFormPasswordConfirm = $('.block-reg #fos_user_registration_form_plainPassword_second');
     this.regFormTermsCheckbox = $('#reg_form > label > span.custom-checkbox > span');
     this.regFormSubmitButton = $('#reg_form button');
-    this.regFormCloseButton = $('#reg_form #SVGDoc');
+    // this.regFormCloseButton = $('#reg_form #SVGDoc');
     this.regFormSuccess = $ ('.block-success');
     this.regFormSuccessUserEmailText = $('.block-success .user-email');
     this.regFormSuccessCLoseButton = $('.block-success .close-modal')
@@ -129,8 +129,8 @@ let WelcomePage = function () {
     this.loginFormUserNameInput =$('#form_auth #in_user_login');
     this.loginFormPasswordInput =$('#form_auth #in_user_pass');
     this.loginFormLoginButton = $('#btn_auth');
-    this.forgotPasswordLink = $('.user-forget');
-    this.createAccount =$('.user-create');
+   /* this.forgotPasswordLink = $('.user-forget');
+    this.createAccount =$('.user-create');*/
 
 
                  /*  Actions block */
