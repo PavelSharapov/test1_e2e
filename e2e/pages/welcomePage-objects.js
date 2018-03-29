@@ -188,13 +188,13 @@ let WelcomePage = function () {
         browser.wait(EC.visibilityOf(this.regFormSuccess),2000);
     };
     this.regFormFillingIn = function () {
-        this.userName = 'p'+(Math.round(Math.random()*2000+1500));
-        this.email = this.userName + 'autotest' + '@pravda.world';
-        this.password = '44445678t';
-        this.regFormEmailInput.sendKeys(this.email);
-        this.regFormUserNameInput.sendKeys(this.userName);
-        this.regFormPasswordInput.sendKeys(this.password);
-        this.regFormPasswordConfirm.sendKeys(this.password);
+        let userName = 'p'+(Math.round(Math.random()*2000+1500));
+        let email = userName + 'autotest' + '@pravda.world';
+        let password = '44445678t';
+        this.regFormEmailInput.sendKeys(email);
+        this.regFormUserNameInput.sendKeys(userName);
+        this.regFormPasswordInput.sendKeys(password);
+        this.regFormPasswordConfirm.sendKeys(password);
     };
     this.regFormSuccessClose = function () {
         browser.actions().click(this.regFormSuccessCLoseButton).perform();
@@ -204,6 +204,8 @@ let WelcomePage = function () {
      */
     this.loginFormOpen = function () {
         browser.actions().click(this.headerLoginButton).perform();
+        this.waitForLoginFormOpen();
+
     };
     this.waitForLoginFormOpen = function () {
         browser.wait(EC.visibilityOf(this.loginForm),2000);

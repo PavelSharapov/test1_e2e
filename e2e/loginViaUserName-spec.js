@@ -5,7 +5,7 @@ let LoginedUserMainPage = require('./pages/loginedUserGamesPage-objects.js');
 
 describe('Login to the site', function () {
     let welcomePage = new WelcomePage();
-    let mainPage = new LoginedUserMainPage();
+    let loginedUserGamesPage = new LoginedUserMainPage();
     let userName = 'p1';
     let userPassword = '44445678t';
 
@@ -15,15 +15,14 @@ describe('Login to the site', function () {
         });
         it ('Should opened Login modal window', function () {
             welcomePage.loginFormOpen();
-            welcomePage.waitForLoginFormOpen();
             expect(welcomePage.loginForm.isDisplayed()).toBe(true);
         });
         it('Should be login to site',function () {
             welcomePage.loginFormUserNameInput.sendKeys(userName);
             welcomePage.loginFormPasswordInput.sendKeys(userPassword);
             welcomePage.loginFormloginButtonPress();
-            mainPage.waitForMainPageDownloadAfterUserLogIn();
-            expect(mainPage.headerLoginedUserItem.isDisplayed()).toBe(true);
+            loginedUserGamesPage.waitForMainPageDownloadAfterUserLogIn();
+            expect(loginedUserGamesPage.headerLoginedUserItem.isDisplayed()).toBe(true);
 
         });
 
