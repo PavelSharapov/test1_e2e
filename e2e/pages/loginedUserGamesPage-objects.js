@@ -139,7 +139,7 @@ let LoginedUserGamesPage = function () {
      * Login to site via Username
      */
 
-    this.login = function (userName, userPassword) {
+    this.logIn = function (userName, userPassword) {
         browser.driver.manage().window().maximize();
         browser.driver.get(browser.baseUrl);
         browser.ignoreSynchronization = true;

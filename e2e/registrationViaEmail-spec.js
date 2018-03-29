@@ -15,8 +15,6 @@ describe('Registration on site through Email: ', function () {
     });
     it ('Should opened Registration modal window', function () {
         welcomePage.regFormOpen();
-        welcomePage.waitForRegFormOpen();
-        // browser.sleep(2000);
         expect(welcomePage.regForm.isDisplayed()).toBe(true);
     });
     it ('Should be registration on site', function () {

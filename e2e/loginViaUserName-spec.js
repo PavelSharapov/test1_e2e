@@ -11,7 +11,6 @@ describe('Login to the site', function () {
 
         it('Should download Welcome page', function () {
             welcomePage.get();
-            welcomePage.waitForWelcomePageDownload();
             expect(browser.getCurrentUrl()).toEqual(browser.baseUrl);
         });
         it ('Should opened Login modal window', function () {

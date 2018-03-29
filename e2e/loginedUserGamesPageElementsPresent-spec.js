@@ -8,7 +8,7 @@ let helpers = require('protractor-helpers');
 describe('Logined user Games page sections.', function () {
     let loginedUserGamesPage = new LoginedUserGamesPage();
     it('login at site', function () {
-        loginedUserGamesPage.login('p1','44445678t');
+        loginedUserGamesPage.logIn('p1','44445678t');
     });
     describe('Header section:', function () {
         it('should displayed "Games" button in header', function () {

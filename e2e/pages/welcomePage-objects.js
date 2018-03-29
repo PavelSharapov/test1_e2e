@@ -18,10 +18,11 @@ let WelcomePage = function () {
     this.headerBonusesInfoItem = $('#welcome-lan > header > div > div > div.main-nav > ul > li:nth-child(4) > a');
     this.headerTournamentsItem = $('#welcome-lan > header > div > div > div.main-nav > ul > li:nth-child(5) > a');
     this.headerLoginButton = $('#btn-login');
+    this.headerLoginButtonSubText = $('.sub-text');
     this.headerRegisterButton = $('#btn-register');
     this.headerWelcomeBonusButton = $('#btn-bonuses');
     /**
-     *  Welcome section
+     *  Welcome landing section
      */
     this.welcomeBlock = $('.welcome-block');
     this.welcomeText = $('.sp-welcom');
@@ -43,7 +44,7 @@ let WelcomePage = function () {
     this.welcomeRegisterBlockConfirmPasswordInput = $('#fos_user_registration_form_plainPassword_second');
     this.welcomeRegisterBlockCheckBox = $('.my-check.agree-term');
     this.welcomeTermsLink = $ ('.my-check.agree-term span a');
-    this.welcomeRegisterBlockRegistrationButton = $ ('.reg-btn');
+    this.welcomeRegisterBlockRegistrationButton = $ ('.reg-btn.disbled');
     /**
      * Our bonuses section
      */
@@ -144,6 +145,8 @@ let WelcomePage = function () {
         browser.driver.get(browser.baseUrl);
         browser.ignoreSynchronization = true;
         // browser.waitForAngularEnabled(false);
+        this.waitForWelcomePageDownload();
+
 
     };
     /**
@@ -170,6 +173,7 @@ let WelcomePage = function () {
      */
     this.regFormOpen = function () {
         browser.actions().click(this.headerRegisterButton).perform();
+        this.waitForRegFormOpen();
     };
     this.waitForRegFormOpen = function () {
         browser.wait(EC.visibilityOf(this.regForm),2000);
