@@ -106,10 +106,10 @@ describe('Logined user Games page sections.', function () {
         it('should displayed navigate dot_1', function () {
             expect(loginedUserGamesPage.sliderDot_1).toBeDisplayed();
         });
-        it('should displayed navigate dot_1', function () {
+        it('should displayed navigate dot_2', function () {
             expect(loginedUserGamesPage.sliderDot_2).toBeDisplayed();
         });
-        it('should displayed navigate dot_1', function () {
+        it('should displayed navigate dot_3', function () {
             expect(loginedUserGamesPage.sliderDot_3).toBeDisplayed();
         });
     });
