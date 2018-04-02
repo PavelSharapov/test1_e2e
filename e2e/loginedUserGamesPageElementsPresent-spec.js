@@ -11,50 +11,86 @@ describe('Logined user Games page sections.', function () {
         loginedUserGamesPage.logIn('p1','44445678t');
     });
     describe('Header section:', function () {
-        it('should displayed "Games" button in header', function () {
-            expect(loginedUserGamesPage.headerAllGamesItem).toBeDisplayed();
-           // browser.sleep(2000);
-        });
-        it('should displayed "Jackpot" button in header', function () {
-            expect(loginedUserGamesPage.headerJackpotItem).toBeDisplayed();
-            // browser.sleep(2000);
-        });
-        it('should displayed "Wllets" button in header', function () {
-            expect(loginedUserGamesPage.headerCashboxItem).toBeDisplayed();
-            // browser.sleep(2000);
-        });
-        it('should displayed "Bonuses" button in header', function () {
-            expect(loginedUserGamesPage.headerBonusesInfoItem).toBeDisplayed();
-            // browser.sleep(2000);
-        });
-        it('should displayed "Tournaments" button in header', function () {
-            expect(loginedUserGamesPage.headerTournamentsItem).toBeDisplayed();
-            // browser.sleep(2000);
-        });
         it('should displayed Pravda logo in header', function () {
             expect(loginedUserGamesPage.headerLogoPravda).toBeDisplayed();
             // browser.sleep(2000);
         });
-        it('should displayed logined user item ', function () {
-            expect(loginedUserGamesPage.headerUserNickName).toBeDisplayed();
+        it('should present "Base url" link at Pravda logo in header', function () {
+            expect(loginedUserGamesPage.headerLogoPravda.getAttribute('href'))
+                .toEqual(browser.baseUrl);
+        });
+        it('should displayed "Games" button in header', function () {
+            expect(loginedUserGamesPage.headerAllGamesItem).toBeDisplayed();
+           // browser.sleep(2000);
+        });
+        it('should present "/game" link at Game button', function () {
+            expect(loginedUserGamesPage.headerAllGamesItem.getAttribute('href'))
+                .toEqual(browser.baseUrl + '/games');
+        });
+        it('should displayed "Jackpot" button in header', function () {
+            expect(loginedUserGamesPage.headerJackpotItem).toBeDisplayed();
+        });
+        it('should present INPROGRESS "#" link at Jackpot button', function () {
+            expect(loginedUserGamesPage.headerJackpotItem.getAttribute('href'))
+                .toEqual(browser.baseUrl + '/games#');
+        });
+        it('should displayed "Wllets" button in header', function () {
+            expect(loginedUserGamesPage.headerCashboxItem).toBeDisplayed();
+        });
+        it('should present "/user/wallets" link in header', function () {
+            expect(loginedUserGamesPage.headerCashboxItem.getAttribute('href'))
+                .toEqual(browser.baseUrl + "/user/wallets");
+        });
+        it('should displayed "Bonuses" button in header', function () {
+            expect(loginedUserGamesPage.headerBonusesInfoItem).toBeDisplayed();
+        });
+        it('should present "/bonus-info" link at Bonuses button in header', function () {
+            expect(loginedUserGamesPage.headerBonusesInfoItem.getAttribute('href'))
+                .toEqual(browser.baseUrl + '/bonus-info');
+        });
+        it('should displayed "Tournaments" button in header', function () {
+            expect(loginedUserGamesPage.headerTournamentsItem).toBeDisplayed();
+        });
+        it('should present INPROGRESS "#" link at Tournamens button', function () {
+            expect(loginedUserGamesPage.headerTournamentsItem.getAttribute('href'))
+                .toEqual(browser.baseUrl + '/games#');
+        });
+        it('should displayed logined user icon ', function () {
+            expect(loginedUserGamesPage.headerLoginedUserItem).toBeDisplayed();
+        });    
+        it('should presrnt "/user/profile" link at the logined user icon', function () {
+            expect(loginedUserGamesPage.headerLoginedUserItem.getAttribute('href'))
+                .toEqual(browser.baseUrl + '/user/profile');
         });
         it('should displayed logined user name ', function () {
-            expect(loginedUserGamesPage.headerLoginedUserItem).toBeDisplayed();
+            expect(loginedUserGamesPage.headerUserNickName).toBeDisplayed();
         });
-        it('should displayed wallet item', function () {
+        it('should displayed "Wallet" item', function () {
             expect(loginedUserGamesPage.headerUserWalletItem).toBeDisplayed();
         });
         it('should displayed current value ', function () {
             expect(loginedUserGamesPage.headerCurrentWalueVolletItem).toBeDisplayed();
         });
-        it('should displayed deposit (make) item', function () {
+        it('should displayed "Deposit (make)" item', function () {
             expect(loginedUserGamesPage.headerDepositItem).toBeDisplayed();
         });
-        it('should displayed bonus (activate) item', function () {
+        it('should present "/user/deposits/make" link at the deposit(make) item ', function () {
+            expect(loginedUserGamesPage.headerDepositItem.getAttribute('href'))
+                .toEqual('/user/deposits/make');
+        });
+        it('should displayed "Bonus (activate)" item in hesder', function () {
             expect(loginedUserGamesPage.headerBonusActivateItem).toBeDisplayed();
+        });
+        it('should present "/user/activate-bonus" link at bonus item', function () {
+            expect(loginedUserGamesPage.headerDepositItem.getAttribute('href'))
+                .toEqual(browser.baseUrl + '/user/activate-bonus');
         });
         it('should displayed logout item', function () {
             expect(loginedUserGamesPage.headerLogOutItem).toBeDisplayed();
+        });
+        it('should present "/logout" link at the logout button', function () {
+            expect(loginedUserGamesPage.headerLogOutItem.getAttribute('href'))
+                .toEqual('/logout');
         });
     });
     describe('Slider section:', function () {

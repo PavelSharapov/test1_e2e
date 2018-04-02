@@ -15,6 +15,10 @@ describe('Welcome page sections.', function () {
         it('should displayed Pravda logo in header', function () {
             expect(welcomePage.headerLogoPravda.isDisplayed()).toBe(true);
         });
+        it('should present "Base url" link at Pravda logo in header ', function () {
+            expect(welcomePage.headerLogoPravda.getAttribute('href'))
+                .toEqual(browser.baseUrl);
+        });
         it('should displayed "Games" button in header', function () {
             expect(welcomePage.headerAllGamesItem.isDisplayed()).toBe(true);
         });
@@ -32,7 +36,7 @@ describe('Welcome page sections.', function () {
         it('should displayed "Wallets" button in header', function () {
             expect(welcomePage.headerCashboxItem.isDisplayed()).toBe(true);
         });
-        it('should present "/l" link at Wallets button  ', function () {
+        it('should present "/user/wallets" link at Wallets button  ', function () {
             expect(welcomePage.headerCashboxItem.getAttribute('href'))
                 .toEqual(browser.baseUrl + '/user/wallets');
         });
@@ -144,7 +148,6 @@ describe('Welcome page sections.', function () {
         });
         it('"Bonus item 2" should displayed',function () {
             expect(welcomePage.ourBonusesBlockBonusItem_2.isDisplayed()).toBe(true);
-
         });
         it('should present "/bonus-info" link at Bonus item 2 ', function () {
             expect(welcomePage.ourBonusesBlockBonusItem_2.getAttribute('href'))
