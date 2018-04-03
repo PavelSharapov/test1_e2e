@@ -145,20 +145,44 @@ describe('Logined user Games page sections.', function () {
         it('should displayed game filter "Popular"', function () {
             expect(loginedUserGamesPage.gamesFilterItem_2).toBeDisplayed();
         });
+        it('should present "/games/popular" link at the "Popular" filter', function () {
+            expect(loginedUserGamesPage.gamesFilterItem_2.getAttribute('data-list'))
+                .toEqual(browser.baseUrl + '/games/popular/html5');
+        });
         it('should displayed game filter "All games"', function () {
             expect(loginedUserGamesPage.gamesFilterItem_3).toBeDisplayed();
+        });
+        it('should present "/games/all" link at the "All games" filter', function () {
+            expect(loginedUserGamesPage.gamesFilterItem_3.getAttribute('data-list'))
+                .toEqual(browser.baseUrl + '/games/all/html5');
         });
         it('should displayed game filter "Slots"', function () {
             expect(loginedUserGamesPage.gamesFilterItem_4).toBeDisplayed();
         });
+        it('should present "/games/slots" link at the "Slots" filter', function () {
+            expect(loginedUserGamesPage.gamesFilterItem_4.getAttribute('data-list'))
+                .toEqual(browser.baseUrl + '/games/slots/html5');
+        });
         it('should displayed game filter "Classic"', function () {
             expect(loginedUserGamesPage.gamesFilterItem_5).toBeDisplayed();
+        });
+        it('should present "/games/classic" link at the "Classic" filter', function () {
+            expect(loginedUserGamesPage.gamesFilterItem_5.getAttribute('data-list'))
+                .toEqual(browser.baseUrl + '/games/classic/html5');
         });
         it('should displayed game filter "Table"', function () {
             expect(loginedUserGamesPage.gamesFilterItem_6).toBeDisplayed();
         });
+        it('should present "/games/table" link at the "Table" filter', function () {
+            expect(loginedUserGamesPage.gamesFilterItem_6.getAttribute('data-list'))
+                .toEqual(browser.baseUrl +  '/games/table/html5');
+        });
         it('should displayed game filter "Other"', function () {
             expect(loginedUserGamesPage.gamesFilterItem_7).toBeDisplayed();
+        });
+        it('should present "/games/misc" link at the "Other" filter', function () {
+            expect(loginedUserGamesPage.gamesFilterItem_7.getAttribute('data-list'))
+                .toEqual(browser.baseUrl + '/games/misc/html5');
         });
     });
     describe('Vendors filter section:',function () {
@@ -167,34 +191,50 @@ describe('Logined user Games page sections.', function () {
         });
         it('should displayed vendor filter "Netent"', function () {
             expect(loginedUserGamesPage.vendorsFilter_1).toBeDisplayed();
+        });
+        it('should displayed "Netent" vendor filter icon', function () {
             expect(loginedUserGamesPage.vendorsFilterIcon_1).toBeDisplayed();
         });
         it('should displayed vendor filter "Microgaming"', function () {
             expect(loginedUserGamesPage.vendorsFilter_2).toBeDisplayed();
+        });
+        it('should displayed "Microgaming" vendor filter icon', function () {
             expect(loginedUserGamesPage.vendorsFilterIcon_2).toBeDisplayed();
         });
         it('should displayed vendor filter "Amatic"', function () {
             expect(loginedUserGamesPage.vendorsFilter_3).toBeDisplayed();
+        });
+        it('should displayed "Amatic" vendor filter icon', function () {
             expect(loginedUserGamesPage.vendorsFilterIcon_3).toBeDisplayed();
         });
         it('should displayed vendor filter "Novomatic"', function () {
             expect(loginedUserGamesPage.vendorsFilter_4).toBeDisplayed();
+        });
+        it('should displayed "Novomatic" vendor filter icon', function () {
             expect(loginedUserGamesPage.vendorsFilterIcon_4).toBeDisplayed();
         });
         it('should displayed vendor filter "Aristocrat"', function () {
             expect(loginedUserGamesPage.vendorsFilter_5).toBeDisplayed();
+        });
+        it('should displayed "Aristocrat" vendor filter icon', function () {
             expect(loginedUserGamesPage.vendorsFilterIcon_5).toBeDisplayed();
         });
         it('should displayed vendor filter "Egt"', function () {
             expect(loginedUserGamesPage.vendorsFilter_6).toBeDisplayed();
+        });
+        it('should displayed "Egt" vendor filter icon', function () {
             expect(loginedUserGamesPage.vendorsFilterIcon_6).toBeDisplayed();
         });
         it('should displayed vendor filter "Igt"', function () {
             expect(loginedUserGamesPage.vendorsFilter_7).toBeDisplayed();
+        });
+        it('should displayed "Igt" vendor filter icon', function () {
             expect(loginedUserGamesPage.vendorsFilterIcon_7).toBeDisplayed();
         });
         it('should displayed vendor filter "Igrosoft"', function () {
             expect(loginedUserGamesPage.vendorsFilter_8).toBeDisplayed();
+        });
+        it('should displayed "Igrosoft" vendor filter icon', function () {
             expect(loginedUserGamesPage.vendorsFilterIcon_8).toBeDisplayed();
         });
     });
