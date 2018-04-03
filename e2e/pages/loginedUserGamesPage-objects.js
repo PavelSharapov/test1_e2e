@@ -17,13 +17,20 @@ let LoginedUserGamesPage = function () {
     this.headerCashboxItem = $('body > header > div > div > div.main-nav > ul > li:nth-child(3) > a');
     this.headerBonusesInfoItem = $('body > header > div > div > div.main-nav > ul > li:nth-child(4) > a');
     this.headerTournamentsItem = $('body > header > div > div > div.main-nav > ul > li:nth-child(5) > a');
-    this.headerUserNickName = $('.u_log_tittle.user_nikname');
-    this.headerLoginedUserItem = $('.buy_credit_btn.user_pic_in.u_log_link');
-    this.headerUserWalletItem = $('.main-wallet');
-    this.headerCurrentWalueVolletItem = $('#currentWalueVolletDiv');
-    this.headerDepositItem = $('#dep_cvg');
-    this.headerBonusActivateItem = $('#bonus_svg');
-    this.headerLogOutItem = $('.wr-user-log ul li:nth-child(5) a #Layer_1');
+    this.headerLoginedUserName = $('.u_log_tittle.user_nikname');
+    this.headerLoginedUserItemIcon = $('#user_cvg');
+    this.headerLoginedUserItemLink = $('.buy_credit_btn.user_pic_in.u_log_link');
+    this.headerUserWalletItemTitle = $('#main-wallet span');
+    this.headerUserWalletItemCurrentValue = $('#currentWalueVolletDiv');
+    this.headerDepositItemIcon = $('#dep_cvg');
+    this.headerDepositItemTitle = $('.wr-user-log ul li:nth-child(3) a span');
+    this.headerDepositItemLink = $('.wr-user-log ul li:nth-child(3) a');
+    this.headerBonusActivateItemTitle = $('.wr-user-log ul li:nth-child(4) a span');
+    this.headerBonusActivateItemIcon = $('#bonus_svg');
+    this.headerBonusActivateItemLink = $('.wr-user-log ul li:nth-child(4) a');
+    this.headerLogOutItemTitle = $('.wr-user-log ul li:nth-child(5) a span');
+    this.headerLogOutItemIcon = $('.wr-user-log ul li:nth-child(5) #Layer_1');
+    this.headerLogOutItemLink = $('.wr-user-log ul li:nth-child(5) a');
     this.headerLoginButton = $('#btn-login');
     /**
      * Login popup
@@ -160,15 +167,16 @@ let LoginedUserGamesPage = function () {
         browser.wait(EC.visibilityOf(this.headerLogoPravda),3000)
     };
     this.waitForLoginFormOpen = function () {
-        browser.wait(EC.visibilityOf(this.loginForm), 2000)
+        browser.wait(EC.visibilityOf(this.loginForm), 3000)
     };
 
     /**
      * Waiting for "Games" page download
      */
     this.waitForMainPageDownloadAfterUserLogIn = function () {
-        browser.wait(EC.visibilityOf(this.headerLogoPravda),4000);
-        browser.wait(EC.visibilityOf(this.headerLoginedUserItem),4000);
+        browser.wait(EC.visibilityOf(this.headerLogoPravda),6000);
+        browser.wait(EC.visibilityOf(this.headerLoginedUserName),6000);
+        browser.wait(EC.visibilityOf(this.headerLoginedUserItemIcon),6000);
     };
     /**
      * Jump to the footer

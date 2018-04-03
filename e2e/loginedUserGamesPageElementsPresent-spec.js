@@ -34,7 +34,7 @@ describe('Logined user Games page sections.', function () {
             expect(loginedUserGamesPage.headerJackpotItem.getAttribute('href'))
                 .toEqual(browser.baseUrl + '/games#');
         });
-        it('should displayed "Wllets" button in header', function () {
+        it('should displayed "Cash box" button in header', function () {
             expect(loginedUserGamesPage.headerCashboxItem).toBeDisplayed();
         });
         it('should present "/user/wallets" link in header', function () {
@@ -55,42 +55,51 @@ describe('Logined user Games page sections.', function () {
             expect(loginedUserGamesPage.headerTournamentsItem.getAttribute('href'))
                 .toEqual(browser.baseUrl + '/games#');
         });
+        it('should displayed logined user name ', function () {
+            expect(loginedUserGamesPage.headerLoginedUserName).toBeDisplayed();
+        });
         it('should displayed logined user icon ', function () {
-            expect(loginedUserGamesPage.headerLoginedUserItem).toBeDisplayed();
-        });    
+            expect(loginedUserGamesPage.headerLoginedUserItemIcon).toBeDisplayed();
+        });
         it('should presrnt "/user/profile" link at the logined user icon', function () {
-            expect(loginedUserGamesPage.headerLoginedUserItem.getAttribute('href'))
+            expect(loginedUserGamesPage.headerLoginedUserItemLink.getAttribute('href'))
                 .toEqual(browser.baseUrl + '/user/profile');
         });
-        it('should displayed logined user name ', function () {
-            expect(loginedUserGamesPage.headerUserNickName).toBeDisplayed();
+        it('should displayed "Wallet" item title', function () {
+            expect(loginedUserGamesPage.headerUserWalletItemTitle).toBeDisplayed();
         });
-        it('should displayed "Wallet" item', function () {
-            expect(loginedUserGamesPage.headerUserWalletItem).toBeDisplayed();
+        it('should displayed User current currency value ', function () {
+            expect(loginedUserGamesPage.headerUserWalletItemCurrentValue).toBeDisplayed();
         });
-        it('should displayed current value ', function () {
-            expect(loginedUserGamesPage.headerCurrentWalueVolletItem).toBeDisplayed();
+        it('should displayed "Deposit (make)" title ', function () {
+            expect(loginedUserGamesPage.headerDepositItemTitle).toBeDisplayed();
         });
-        it('should displayed "Deposit (make)" item', function () {
-            expect(loginedUserGamesPage.headerDepositItem).toBeDisplayed();
+        it('should displayed "Deposit (make)" icon ', function () {
+            expect(loginedUserGamesPage.headerDepositItemIcon).toBeDisplayed();
         });
         it('should present "/user/deposits/make" link at the deposit(make) item ', function () {
-            expect(loginedUserGamesPage.headerDepositItem.getAttribute('href'))
-                .toEqual('/user/deposits/make');
+            expect(loginedUserGamesPage.headerDepositItemLink.getAttribute('href'))
+                .toEqual(browser.baseUrl + '/user/deposits/make');
         });
-        it('should displayed "Bonus (activate)" item in hesder', function () {
-            expect(loginedUserGamesPage.headerBonusActivateItem).toBeDisplayed();
+        it('should displayed "Bonus (activate)" icon in hesder', function () {
+            expect(loginedUserGamesPage.headerBonusActivateItemIcon).toBeDisplayed();
+        });
+        it('should displayed "Bonus (activate)" title in hesder', function () {
+            expect(loginedUserGamesPage.headerBonusActivateItemTitle).toBeDisplayed();
         });
         it('should present "/user/activate-bonus" link at bonus item', function () {
-            expect(loginedUserGamesPage.headerDepositItem.getAttribute('href'))
+            expect(loginedUserGamesPage.headerBonusActivateItemLink.getAttribute('href'))
                 .toEqual(browser.baseUrl + '/user/activate-bonus');
         });
-        it('should displayed logout item', function () {
-            expect(loginedUserGamesPage.headerLogOutItem).toBeDisplayed();
+        it('should displayed logout item title', function () {
+            expect(loginedUserGamesPage.headerLogOutItemTitle).toBeDisplayed();
+        });
+        it('should displayed logout item icon', function () {
+            expect(loginedUserGamesPage.headerLogOutItemIcon).toBeDisplayed();
         });
         it('should present "/logout" link at the logout button', function () {
-            expect(loginedUserGamesPage.headerLogOutItem.getAttribute('href'))
-                .toEqual('/logout');
+            expect(loginedUserGamesPage.headerLogOutItemLink.getAttribute('href'))
+                .toEqual(browser.baseUrl + '/logout');
         });
     });
     describe('Slider section:', function () {
@@ -128,6 +137,10 @@ describe('Logined user Games page sections.', function () {
         });
         it('should displayed game filter "New"', function () {
             expect(loginedUserGamesPage.gamesFilterItem_1).toBeDisplayed();
+        });
+        it('should present "/new" link at the New filter button', function () {
+            expect(loginedUserGamesPage.gamesFilterItem_1.getAttribute('data-list'))
+                .toEqual(browser.baseUrl + '/games/new/html5' );
         });
         it('should displayed game filter "Popular"', function () {
             expect(loginedUserGamesPage.gamesFilterItem_2).toBeDisplayed();
