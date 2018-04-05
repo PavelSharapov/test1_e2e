@@ -328,9 +328,12 @@ describe('Logined user Games page sections.', function () {
         it('should displayed footer logo', function () {
             expect(loginedUserGamesPage.footerLogo).toBeDisplayed();
         });
-        it('should displayed "Contacts" item and contain link',function () {
+        it('should displayed "Contacts" item ',function () {
             expect(loginedUserGamesPage.footerContactsLink).toBeDisplayed();
-            expect(loginedUserGamesPage.footerContactsLink.getAttribute('href')).toEqual(browser.baseUrl + '/contacts');
+        });
+        it('should present "Contacts"  link',function () {
+            expect(loginedUserGamesPage.footerContactsLink.getAttribute('href'))
+                .toEqual(browser.baseUrl + '/contacts');
             /*loginedUserGamesPage.footerContactsLink.getText().then(function (text) {
                 console.log(text);
             });
