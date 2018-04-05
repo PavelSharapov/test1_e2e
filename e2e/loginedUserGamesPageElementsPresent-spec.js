@@ -242,53 +242,79 @@ describe('Logined user Games page sections.', function () {
         it('should displayed games block', function () {
             expect(loginedUserGamesPage.gamesBlock).toBeDisplayed();
         });
-        it('should displayed 1st game prewiev', function () {
+        it('should displayed 1st game prewiev top', function () {
             expect(loginedUserGamesPage.gamePrewiewTop_1).toBeDisplayed();
+        });
+        it('should displayed 1st game prewiev bottom', function () {
             expect(loginedUserGamesPage.gamePrewiewBottom_1).toBeDisplayed();
         });
-        it('should displayed 2nd game prewiev', function () {
+        it('should displayed 2nd game prewiev top', function () {
             expect(loginedUserGamesPage.gamePrewiewTop_2).toBeDisplayed();
+        });
+        it('should displayed 2nd game prewiev bottom', function () {
             expect(loginedUserGamesPage.gamePrewiewBottom_2).toBeDisplayed();
         });
-        it('should displayed 3rd game prewiev', function () {
+        it('should displayed 3rd game prewiev top', function () {
             expect(loginedUserGamesPage.gamePrewiewTop_3).toBeDisplayed();
+        });
+        it('should displayed 3rd game prewiev bottom', function () {
             expect(loginedUserGamesPage.gamePrewiewBottom_3).toBeDisplayed();
         });
-        it('should displayed 4th game prewiev', function () {
+        it('should displayed 4th game prewiev top', function () {
             expect(loginedUserGamesPage.gamePrewiewTop_4).toBeDisplayed();
+        });
+        it('should displayed 4th game prewiev bottom', function () {
             expect(loginedUserGamesPage.gamePrewiewBottom_4).toBeDisplayed();
         });
-        it('should displayed 5th game prewiev', function () {
+        it('should displayed 5th game prewiev top', function () {
             expect(loginedUserGamesPage.gamePrewiewTop_5).toBeDisplayed();
+        });
+        it('should displayed 5th game prewiev bottom', function () {
             expect(loginedUserGamesPage.gamePrewiewBottom_5).toBeDisplayed();
         });
-        it('should displayed 6th game prewiev', function () {
+        it('should displayed 6th game prewiev top', function () {
             expect(loginedUserGamesPage.gamePrewiewTop_6).toBeDisplayed();
+        });
+        it('should displayed 6th game prewiev bottom', function () {
             expect(loginedUserGamesPage.gamePrewiewBottom_6).toBeDisplayed();
         });
-        it('should displayed 7th game prewiev', function () {
+        it('should displayed 7th game prewiev top', function () {
             expect(loginedUserGamesPage.gamePrewiewTop_7).toBeDisplayed();
+        });
+        it('should displayed 7th game prewiev bottom', function () {
             expect(loginedUserGamesPage.gamePrewiewBottom_7).toBeDisplayed();
         });
-        it('should displayed 8th game prewiev', function () {
+        it('should displayed 8th game prewiev top', function () {
             expect(loginedUserGamesPage.gamePrewiewTop_8).toBeDisplayed();
+        });
+        it('should displayed 8th game prewiev bottom', function () {
             expect(loginedUserGamesPage.gamePrewiewBottom_8).toBeDisplayed();
         });
-        it('should displayed 9th game prewiev', function () {
+        it('should displayed 9th game prewiev top', function () {
             expect(loginedUserGamesPage.gamePrewiewTop_9).toBeDisplayed();
+        });
+        it('should displayed 9th game prewiev bottom', function () {
             expect(loginedUserGamesPage.gamePrewiewBottom_9).toBeDisplayed();
         });
-        it('should displayed 10th game prewiev', function () {
+        it('should displayed 10th game prewiev top', function () {
             expect(loginedUserGamesPage.gamePrewiewTop_10).toBeDisplayed();
+        });
+        it('should displayed 10th game prewiev bottom', function () {
             expect(loginedUserGamesPage.gamePrewiewBottom_10).toBeDisplayed();
         });
-        it('should displayed 11nd game prewiev', function () {
+        it('should displayed 11nd game prewiev top', function () {
             expect(loginedUserGamesPage.gamePrewiewTop_11).toBeDisplayed();
+        });
+        it('should displayed 11nd game prewiev bottom', function () {
             expect(loginedUserGamesPage.gamePrewiewBottom_11).toBeDisplayed();
         });
-        it('should displayed big-game block prewiev', function () {
+        it('should displayed big-game block prewiev top', function () {
             expect(loginedUserGamesPage.bigGamePrewiewTop.isDisplayed()).toBe(true);
+        });
+        it('should displayed big-game block prewiev mid', function () {
             expect(loginedUserGamesPage.bigGamePrewiewMid.isDisplayed()).toBe(false);
+        });
+        it('should displayed big-game block prewiev bottom', function () {
             expect(loginedUserGamesPage.bigGamePrewiewBottom.isDisplayed()).toBe(true);
         });
     });
@@ -323,37 +349,54 @@ describe('Logined user Games page sections.', function () {
                 console.log(link);
             });*/
         });
-        it('should displayed "Terms" item and contain link',function () {
+        it('should displayed "Terms" item ',function () {
             expect(loginedUserGamesPage.footerTermsLink).toBeDisplayed();
-            expect(loginedUserGamesPage.footerTermsLink.getAttribute('href')).toEqual(browser.baseUrl + '/page/terms');
         });
-        it('should displayed "Security" item and contain link',function () {
+        it('should present "/page/terms"  link',function () {
+            expect(loginedUserGamesPage.footerTermsLink.getAttribute('href'))
+                .toEqual(browser.baseUrl + '/page/terms');
+        });
+        it('should displayed "Security" item ',function () {
             expect(loginedUserGamesPage.footerSecurityLink).toBeDisplayed();
-            expect(loginedUserGamesPage.footerSecurityLink.getAttribute('href')).toEqual(browser.baseUrl + '/page/security');
         });
-        it('should displayed "FAQ" item and contain link',function () {
+        it('should present "/page/security" link',function () {
+            expect(loginedUserGamesPage.footerSecurityLink.getAttribute('href'))
+                .toEqual(browser.baseUrl + '/page/security');
+        });
+        it('should displayed "FAQ" item ',function () {
             expect(loginedUserGamesPage.footerFaqLink).toBeDisplayed();
-            expect(loginedUserGamesPage.footerFaqLink.getAttribute('href')).toEqual(browser.baseUrl + '/page/faq');
         });
-        it('should displayed "Terms and Conditions" item and contain link',function () {
+        it('should present "/page/faq" link',function () {
+            expect(loginedUserGamesPage.footerFaqLink.getAttribute('href'))
+                .toEqual(browser.baseUrl + '/page/faq');
+        });
+        it('should displayed "Terms and Conditions" item',function () {
             expect(loginedUserGamesPage.footerBonusTermsLink).toBeDisplayed();
-            expect(loginedUserGamesPage.footerBonusTermsLink.getAttribute('href')).toEqual(browser.baseUrl + '/page/bonus-terms');
         });
-        it('should displayed "Affiliates" item and contain link',function () {
+        it('should present "/page/bonus-terms" link',function () {
+            expect(loginedUserGamesPage.footerBonusTermsLink.getAttribute('href'))
+                .toEqual(browser.baseUrl + '/page/bonus-terms');
+        });
+        it('should displayed "Affiliates" item',function () {
             expect(loginedUserGamesPage.footerAffiliatesLink).toBeDisplayed();
-            expect(loginedUserGamesPage.footerAffiliatesLink.getAttribute('href')).toEqual('https://truthaffiliate.com/');
+        });
+        it('should displayed "https://truthaffiliate.com/" link',function () {
+            expect(loginedUserGamesPage.footerAffiliatesLink.getAttribute('href'))
+                .toEqual('https://truthaffiliate.com/');
         });
         it('should displayed Conditions text left block',function () {
             expect(loginedUserGamesPage.footerConditionsLeftBlock).toBeDisplayed();
         });
-        it('should displayed Conditions text right block and contain "/bonus" and "games" links',function () {
+        it('should displayed Conditions text right block',function () {
             expect(loginedUserGamesPage.footerConditionsRightBlock).toBeDisplayed();
         });
-        it('should displayed "Bonus" link in right block of footer terms "/bonus" and "games" links',function () {
-            expect(loginedUserGamesPage.footerConditionsRightBlockBonusLink.getAttribute('href')).toEqual(browser.baseUrl + '/page/inprogres');
+        it('should displayed "bonus" link in right block of footer terms',function () {
+            expect(loginedUserGamesPage.footerConditionsRightBlockBonusLink.getAttribute('href'))
+                .toEqual(browser.baseUrl + '/page/inprogres');
         });
-        it('should displayed "Bonus" link in right block of footer terms "/bonus" and "games" links',function () {
-            expect(loginedUserGamesPage.footerConditionsRightBlockChoiseGameLink.getAttribute('href')).toEqual(browser.baseUrl + '/games');
+        it('should displayed "choise game" link in right block of footer terms',function () {
+            expect(loginedUserGamesPage.footerConditionsRightBlockChoiseGameLink.getAttribute('href'))
+                .toEqual(browser.baseUrl + '/games');
         });
         it('should displayed "Bitcoin" image ',function () {
             expect(loginedUserGamesPage.footerBitcoinImage).toBeDisplayed();
