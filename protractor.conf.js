@@ -15,7 +15,7 @@ exports.config = {
          // './e2e/LoginedUserElementsPresentTests/bonusiPageLogined-spec.js',
          // './e2e/LoginedUserElementsPresentTests/tournamentsPageLogined-spec.js',
          // './e2e/LoginedUserElementsPresentTests/profilePageLogined-spec.js'
-         // './e2e/LoginedUserElementsPresentTests/depositPageLogined-spec.js',
+         './e2e/LoginedUserElementsPresentTests/depositPageLogined-spec.js',
          './e2e/LoginedUserElementsPresentTests/activateBonusPageLogined-spec.js'
 
      ],
