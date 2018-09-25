@@ -1,32 +1,27 @@
 'use strict';
 
-let WelcomePage = require('./pages/newUserWelcomePage-objects.js');
-let LoginedUserMainPage = require('./pages/loginedUserGamesPage-objects.js');
+
+let helpers = require('protractor-helpers');
+let HeaderFooterLoginedUser = require('./PageObgects/headerFooter-objects.js');
+let Login = require('./Helpers/login-objects.js');
+
 
 describe('Login to the site', function () {
-    let welcomePage = new WelcomePage();
-    let loginedUserGamesPage = new LoginedUserMainPage();
-    let userName = 'p1';
-    let userPassword = '44445678t';
+    let logInHelper = new Login();
+    let headerFooter = new HeaderFooterLoginedUser();
 
-        it('Should download Welcome page', function () {
-            welcomePage.get();
-            expect(browser.getCurrentUrl()).toEqual(browser.baseUrl);
-        });
-        it ('Should opened Login modal window', function () {
-            welcomePage.loginFormOpen();
-            expect(welcomePage.loginForm.isDisplayed()).toBe(true);
-        });
+
         it('Should be login to site',function () {
-            welcomePage.loginFormUserNameInput.sendKeys(userName);
-            welcomePage.loginFormPasswordInput.sendKeys(userPassword);
-            welcomePage.loginFormloginButtonPress();
-            loginedUserGamesPage.waitForMainPageDownloadAfterUserLogIn();
-            expect(loginedUserGamesPage.headerLoginedUserItem.isDisplayed()).toBe(true);
+            logInHelper.logIn('p1', '44445678t');
+             expect(headerFooter.headerLoginedUserItemIcon.isDisplayed()).toBe(true);
+        });
+        it('Should displayed "Games page',function () {
+            browser.getCurrentUrl().then (function (url) {
+                console.log('Main page url: ' + url)
+            });
+            expect(browser.getCurrentUrl())
+                .toEqual(browser.baseUrl + '/games');
 
         });
-
-
-
 
 });

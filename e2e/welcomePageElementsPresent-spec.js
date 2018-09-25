@@ -1,11 +1,13 @@
 'use strict';
 
 
-let WelcomePage = require('./pages/welcomePage-objects.js');
+let WelcomePage = require('./PageObgects/welcomePage-objects.js');
+let HeaderFooterLoginedUser = require('./PageObgects/headerFooter-objects.js');
 
 
 describe('Welcome page sections.', function () {
     let welcomePage = new WelcomePage();
+    let headerFooter = new HeaderFooterLoginedUser();
 
     it('should open Welcome page', function () {
         welcomePage.get();
@@ -13,58 +15,58 @@ describe('Welcome page sections.', function () {
     });
     describe('Header section: ', function () {
         it('should displayed Pravda logo in header', function () {
-            expect(welcomePage.headerLogoPravda.isDisplayed()).toBe(true);
+            expect(headerFooter.headerLogoPravda.isDisplayed()).toBe(true);
         });
         it('should present "Base url" link at Pravda logo in header ', function () {
-            expect(welcomePage.headerLogoPravda.getAttribute('href'))
+            expect(headerFooter.headerLogoPravda.getAttribute('href'))
                 .toEqual(browser.baseUrl);
         });
         it('should displayed "Games" button in header', function () {
-            expect(welcomePage.headerAllGamesItem.isDisplayed()).toBe(true);
+            expect(headerFooter.headerAllGamesItem.isDisplayed()).toBe(true);
         });
         it('should present "/games" link at Game button ', function () {
-            expect(welcomePage.headerAllGamesItem.getAttribute('href'))
+            expect(headerFooter.headerAllGamesItem.getAttribute('href'))
                 .toEqual(browser.baseUrl + '/games');
         });
         it('should displayed "Jackpot" button in header', function () {
-            expect(welcomePage.headerJackpotItem.isDisplayed()).toBe(true);
+            expect(headerFooter.headerJackpotItem.isDisplayed()).toBe(true);
         });
         it('should present INPROGRESS "/#" link at Jackpot button ', function () {
-            expect(welcomePage.headerJackpotItem.getAttribute('href'))
+            expect(headerFooter.headerJackpotItem.getAttribute('href'))
                 .toEqual(browser.baseUrl + '#');
         });
         it('should displayed "Wallets" button in header', function () {
-            expect(welcomePage.headerCashboxItem.isDisplayed()).toBe(true);
+            expect(headerFooter.headerKassaItem.isDisplayed()).toBe(true);
         });
         it('should present "/user/wallets" link at Wallets button  ', function () {
-            expect(welcomePage.headerCashboxItem.getAttribute('href'))
+            expect(headerFooter.headerKassaItem.getAttribute('href'))
                 .toEqual(browser.baseUrl + '/user/wallets');
         });
         it('should displayed "Bonuses" button in header', function () {
-            expect(welcomePage.headerBonusesInfoItem.isDisplayed()).toBe(true);
+            expect(headerFooter.headerBonusesInfoItem.isDisplayed()).toBe(true);
         });
         it('should present "/bonus-info" link at Bonuses button ', function () {
-            expect(welcomePage.headerBonusesInfoItem.getAttribute('href'))
+            expect(headerFooter.headerBonusesInfoItem.getAttribute('href'))
                 .toEqual(browser.baseUrl + '/bonus-info');
         });
         it('should displayed "Tournaments" button in header', function () {
-            expect(welcomePage.headerTournamentsItem.isDisplayed()).toBe(true);
+            expect(headerFooter.headerTournamentsItem.isDisplayed()).toBe(true);
         });
         it('should present INPROGRESS "/#" link at Tournamens button', function () {
-            expect(welcomePage.headerTournamentsItem.getAttribute('href'))
+            expect(headerFooter.headerTournamentsItem.getAttribute('href'))
                 .toEqual(browser.baseUrl + '#');
         });
         it('should displayed "Login" button in header', function () {
-            expect(welcomePage.headerLoginButton.isDisplayed()).toBe(true);
+            expect(headerFooter.headerLoginButton.isDisplayed()).toBe(true);
         });
         it('should displayed subtext on Login button in header', function () {
-            expect(welcomePage.headerLoginButtonSubText.isDisplayed()).toBe(true);
+            expect(headerFooter.headerLoginButtonSubText.isDisplayed()).toBe(true);
         });
         it('should displayed "Registration" button in header', function () {
-            expect(welcomePage.headerRegisterButton.isDisplayed()).toBe(true);
+            expect(headerFooter.headerRegisterButton.isDisplayed()).toBe(true);
         });
         it('should displayed "Welcome bonus" button in header', function () {
-            expect(welcomePage.headerWelcomeBonusButton.isDisplayed()).toBe(true);
+            expect(headerFooter.headerWelcomeBonusButton.isDisplayed()).toBe(true);
         });
     });
     describe('Welcome landing section:', function () {
@@ -265,102 +267,105 @@ describe('Welcome page sections.', function () {
     });
     describe('Footer section:', function () {
         it('should displayed Footer-top block',function () {
-            expect(welcomePage.footerTopBlock.isDisplayed()).toBe(true);
+            expect(headerFooter.footerTopBlock.isDisplayed()).toBe(true);
         });
         it('should displayed Footer-bottom block',function () {
-            expect(welcomePage.footerBottomBlock.isDisplayed()).toBe(true);
+            expect(headerFooter.footerBottomBlock.isDisplayed()).toBe(true);
         });
         it('should displayed footer logo', function () {
-            expect(welcomePage.footerLogo.isDisplayed()).toBe(true);
+            expect(headerFooter.footerLogo.isDisplayed()).toBe(true);
         });
         it('should displayed "Contacts" item ',function () {
-            expect(welcomePage.footerContactsLink.isDisplayed()).toBe(true);
+            expect(headerFooter.footerContactsLink.isDisplayed()).toBe(true);
         });
         it('should present "/contacts" link at Contacts item ', function () {
-            expect(welcomePage.footerContactsLink.getAttribute('href'))
+            expect(headerFooter.footerContactsLink.getAttribute('href'))
                 .toEqual(browser.baseUrl + '/contacts');
         });
         it('should displayed "Methods" item ',function () {
-            expect(welcomePage.footerMethodsLink.isDisplayed()).toBe(true);
+            expect(headerFooter.footerMethodsLink.isDisplayed()).toBe(true);
         });
         it('should present "/payment/methods" link at Methods item ', function () {
-            expect(welcomePage.footerMethodsLink.getAttribute('href'))
+            expect(headerFooter.footerMethodsLink.getAttribute('href'))
                 .toEqual(browser.baseUrl + '/payment/methods');
         });
         it('should displayed "Terms" item ',function () {
-            expect(welcomePage.footerTermsLink.isDisplayed()).toBe(true);
+            expect(headerFooter.footerTermsLink.isDisplayed()).toBe(true);
         });
         it('should present "/page/terms" link at Terms item ', function () {
-            expect(welcomePage.footerTermsLink.getAttribute('href'))
+            expect(headerFooter.footerTermsLink.getAttribute('href'))
                 .toEqual(browser.baseUrl + '/page/terms');
         });
         it('should displayed "Security" item ',function () {
-            expect(welcomePage.footerSecurityLink.isDisplayed()).toBe(true);
+            expect(headerFooter.footerSecurityLink.isDisplayed()).toBe(true);
         });
         it('should present "/page/security" link at Security item ', function () {
-            expect(welcomePage.footerSecurityLink.getAttribute('href'))
+            expect(headerFooter.footerSecurityLink.getAttribute('href'))
                 .toEqual(browser.baseUrl + '/page/security');
         });
         it('should displayed "FAQ" item ',function () {
-            expect(welcomePage.footerFaqLink.isDisplayed()).toBe(true);
+            expect(headerFooter.footerFaqLink.isDisplayed()).toBe(true);
         });
         it('should present "/page/faq" link at Faq item ', function () {
-            expect(welcomePage.footerFaqLink.getAttribute('href'))
+            expect(headerFooter.footerFaqLink.getAttribute('href'))
                 .toEqual(browser.baseUrl + '/page/faq');
         });
         it('should displayed "Terms and Conditions" item ',function () {
-            expect(welcomePage.footerBonusTermsLink.isDisplayed()).toBe(true);
+            expect(headerFooter.footerBonusTermsLink.isDisplayed()).toBe(true);
         });
         it('should present "/page/bonus-terms" link at Terms and Conditions item ', function () {
-            expect(welcomePage.footerBonusTermsLink.getAttribute('href'))
+            expect(headerFooter.footerBonusTermsLink.getAttribute('href'))
                 .toEqual(browser.baseUrl + '/page/bonus-terms');
         });
         it('should displayed "Affiliates" item and contain link',function () {
-            expect(welcomePage.footerAffiliatesLink.isDisplayed()).toBe(true);
+            expect(headerFooter.footerAffiliatesLink.isDisplayed()).toBe(true);
         });
         it('should present "https://truthaffiliate.com/" link at Affiliates item ', function () {
-            expect(welcomePage.footerAffiliatesLink.getAttribute('href'))
+            expect(headerFooter.footerAffiliatesLink.getAttribute('href'))
                 .toEqual('https://truthaffiliate.com/');
         });
         it('should displayed Conditions text left block',function () {
-            expect(welcomePage.footerConditionsLeftBlock.isDisplayed()).toBe(true);
+            expect(headerFooter.footerConditionsLeftBlock.isDisplayed()).toBe(true);
         });
         it('should displayed Conditions text right block',function () {
-            expect(welcomePage.footerConditionsRightBlock.isDisplayed()).toBe(true);
+            expect(headerFooter.footerConditionsRightBlock.isDisplayed()).toBe(true);
         });
         it('should displayed "/bonus" link in the Conditions text right block ',function () {
-            expect(welcomePage.footerConditionsRightBlockBonusLink.getAttribute('href')).toEqual(browser.baseUrl + '/page/inprogres');
+            expect(headerFooter.footerConditionsRightBlockBonusLink.getAttribute('href'))
+                .toEqual(browser.baseUrl + '/bonus-info');
         });
         it('should displayed "/games" link in the Conditions text right block',function () {
-            expect(welcomePage.footerConditionsRightBlockChoiseGameLink.getAttribute('href')).toEqual(browser.baseUrl + '/games');
+            expect(headerFooter.footerConditionsRightBlockChoiseGameLink.getAttribute('href'))
+                .toEqual(browser.baseUrl + '/games');
         });
         it('should displayed "Bitcoin" image ',function () {
-            expect(welcomePage.footerBitcoinImage.isDisplayed()).toBe(true);
+            expect(headerFooter.footerBitcoinImage.isDisplayed()).toBe(true);
         });
         it('should displayed "Cubits" image ',function () {
-            expect(welcomePage.footerCubitsImage.isDisplayed()).toBe(true);
+            expect(headerFooter.footerCubitsImage.isDisplayed()).toBe(true);
         });
         it('should displayed "Maestro" image ',function () {
-            expect(welcomePage.footerMaestroImage.isDisplayed()).toBe(true);
+            expect(headerFooter.footerMaestroImage.isDisplayed()).toBe(true);
         });
         it('should displayed "Qiwi wallet" image ',function () {
-            expect(welcomePage.footerQiwiWalletImage.isDisplayed()).toBe(true);
+            expect(headerFooter.footerQiwiWalletImage.isDisplayed()).toBe(true);
         });
         it('should displayed "Mastercard" image ',function () {
-            expect(welcomePage.footerMasterCardImage.isDisplayed()).toBe(true);
+            expect(headerFooter.footerMasterCardImage.isDisplayed()).toBe(true);
         });
         it('should displayed "Visa" image ',function () {
-            expect(welcomePage.footerVisaImage.isDisplayed()).toBe(true);
+            expect(headerFooter.footerVisaImage.isDisplayed()).toBe(true);
         });
         it('should displayed "Wirecard" image ',function () {
-            expect(welcomePage.footerWirecardImage.isDisplayed()).toBe(true);
-            /*welcomePage.footerWirecardImage.getAttribute('src').then(function (img) {
+            expect(headerFooter.footerWirecardImage.isDisplayed()).toBe(true);
+            /*headerFooter.footerWirecardImage.getAttribute('src').then(function (img) {
                 console.log(img);
             });*/
         });
         it('should displayed scroll-top buton',function () {
-            welcomePage.jumpToFooter();
-            expect(welcomePage.footerScrollTopButton.isDisplayed()).toBe(true);
+            headerFooter.jumpToFooter();
+            expect(headerFooter.footerScrollTopButton.isDisplayed()).toBe(true);
+
         });
     });
 });
