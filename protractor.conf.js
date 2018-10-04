@@ -29,8 +29,11 @@ exports.config = {
     capabilities: {
         browserName: 'chrome',
         chromeOptions: {
-            // disable "chrome is being controlled by automated software"
-            'args': ['disable-infobars=true'],
+            'args': [
+                'disable-infobars=true', // disable "chrome is being controlled by automated software"
+                'disable-dev-shm-usage', // fix 199 error of webdriver
+                'no-sandbox'             // fix 199 error of webdriver
+            ]
         },
      /*
          * Set browser language (menus & so on)
