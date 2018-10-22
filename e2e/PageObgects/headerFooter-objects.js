@@ -22,7 +22,7 @@ let HeaderFooterLoginedUser = function () {
     this.headerRegisterButton = $('#btn-register');
     this.headerWelcomeBonusButton = $('#btn-bonuses');
     this.headerLoginedUserName = $('.u_log_tittle.user_nikname');
-    this.headerLoginedUserItemIcon = $('#user_cvg');
+    // this.headerLoginedUserItemIcon = $('#user_cvg');
     this.headerLoginedUserItemLink = $('.buy_credit_btn.user_pic_in.u_log_link');
     this.headerUserWalletItemTitle = $('#main-wallet span');
     this.headerUserWalletItemCurrentValue = $('#currentWalueVolletDiv');
@@ -43,7 +43,7 @@ let HeaderFooterLoginedUser = function () {
      */
     this.footerTopBlock = $('.footer-top');
     this.footerBottomBlock = $('.footer-bot');
-    this.footerLogo = $('#logo-pravda-footer');
+    this.footerLogo = $$('#logo-pravda-footer').first();
     this.footerContactsLink = $$('footer .foter-link').get(0);
     this.footerMethodsLink = $$('footer .foter-link').get(1);
     this.footerTermsLink = $$('footer .foter-link').get(2);

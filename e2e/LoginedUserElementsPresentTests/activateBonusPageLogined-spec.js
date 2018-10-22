@@ -16,7 +16,7 @@ describe('Logined user Activate-bonus page:', function () {
     let name ='p1';
     let pass = '44445678t';
     logInHelper.logIn(name, pass);
-    it(' open "Activation-bonus" page', function () {
+    it(' open "Activate-bonus" page', function () {
         userActivateBonusPage.getActivateBonusPage();
     });
     describe('Header section:', function () {
@@ -67,9 +67,9 @@ describe('Logined user Activate-bonus page:', function () {
         it('should displayed logined user name ', function () {
             expect(headerFooterLogined.headerLoginedUserName).toBeDisplayed();
         });
-        it('should displayed logined user icon ', function () {
+       /* it('should displayed logined user icon ', function () {
             expect(headerFooterLogined.headerLoginedUserItemIcon).toBeDisplayed();
-        });
+        });*/
         it('should presrnt "/user/profile" link at the logined user icon', function () {
             expect(headerFooterLogined.headerLoginedUserItemLink.getAttribute('href'))
                 .toEqual(browser.baseUrl + '/profile');

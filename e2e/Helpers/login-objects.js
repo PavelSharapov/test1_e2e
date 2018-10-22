@@ -52,7 +52,7 @@ let Login = function () {
     this.waitForMainPageDownloadAfterUserLogIn = function () {
         browser.wait(EC.visibilityOf(headerFooterLogined.headerLogoPravda),6000);
         browser.wait(EC.visibilityOf(headerFooterLogined.headerLoginedUserName),6000);
-        browser.wait(EC.visibilityOf(headerFooterLogined.headerLoginedUserItemIcon),6000);
+        // browser.wait(EC.visibilityOf(headerFooterLogined.headerLoginedUserItemIcon),6000);
     };
 };
 
