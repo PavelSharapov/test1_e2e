@@ -113,4 +113,3 @@ let WelcomePage = function () {
 };
 
 module.exports = WelcomePage;
-//fwsfsdf
